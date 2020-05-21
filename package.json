@@ -5,7 +5,11 @@
   "author": "Infant Frontender <newbornfrontender@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
     "@commitlint/config-conventional": "^8.3.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
     "commitlint": "^8.3.5",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
@@ -33,6 +37,7 @@
     "parserOptions": {
       "sourceType": "module"
     },
+    "parser": "babel-eslint",
     "env": {
       "es2020": true,
       "node": true,
@@ -50,6 +55,23 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   },
   "husky": {
     "hooks": {
