@@ -1,4 +1,4 @@
-# grokking-algorithms
+# Grokking Algorithms
 
 ## Exercises
 
