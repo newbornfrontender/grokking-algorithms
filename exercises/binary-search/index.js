@@ -1,4 +1,4 @@
-const binarySearch = (list, item) => {
+export const binarySearch = (list, item) => {
   let low = 0;
   let high = list.length - 1;
 
@@ -13,10 +13,3 @@ const binarySearch = (list, item) => {
 
   return -1;
 };
-
-const list = [1, 3, 4, 5, 8, 21];
-
-// eslint-disable-next-line no-console
-console.log(binarySearch(list, 3));
-
-module.exports = binarySearch;
