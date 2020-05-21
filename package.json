@@ -24,6 +24,7 @@
   "scripts": {
     "format": "prettier --write **/*.{json,md}",
     "lint": "eslint--fix .",
+    "lint:check": "eslint --print-config index.ts | eslint-config-prettier-check",
     "test": "jest"
   },
   "prettier": {
